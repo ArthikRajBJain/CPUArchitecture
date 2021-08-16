@@ -9,14 +9,13 @@ input [3:0] A, B,
 input clk
 );
 
-reg ou, sel;
+reg ou;
 
 assign out = ou;
-assign sel = Sel;
 
 always @ (posedge clk)
   begin
-    case(sel)
+    case(Sel)
       2'b00 : ou = A + B;
       2'b01 : ou = A - B;
       2'b10 : ou = A * B;
