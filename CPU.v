@@ -43,6 +43,7 @@ initial
 always @ (posedge clk)
   begin
     
+    //Getting Instruction From Memory
     if(flag == 0)
     begin
       flag = 1;
@@ -79,6 +80,7 @@ always @ (posedge clk)
       addr = addr + 1;
     end
     
+    //Getting Operand 1 From Memory
     if(flag == 1)
     begin
       flag = 2;
@@ -89,6 +91,7 @@ always @ (posedge clk)
       addr = addr + 1;
     end
     
+    //Getting Operand 2 From Memory
     if(flag == 2)
     begin
       flag = 0;
